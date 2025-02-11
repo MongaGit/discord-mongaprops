@@ -1,0 +1,8 @@
+{
+  "scheduler": {
+    "time": "06:00",
+    "timezone": "America/Sao_Paulo"
+  },
+  "channelId": "CHANNEL_ID",
+  "imagePath": "src/image/bomdia.jpg"
+}

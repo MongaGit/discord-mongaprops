@@ -1,0 +1,14 @@
+services:
+  discord:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mongaprops
+    env_file:
+      - .env
+    restart: unless-stopped
+    networks:
+      - monga
+networks:
+  monga:
+    driver: bridge
