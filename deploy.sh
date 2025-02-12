@@ -24,3 +24,6 @@ echo "Enviando imagem para o Docker Hub..."
 docker push $IMAGE_NAME:$TAG  
 
 echo "Deploy completo."  
+
+#docker tag $IMAGE_NAME $IMAGE_NAME:$TAG
+#docker push $IMAGE_NAME:$TAG
