@@ -25,8 +25,8 @@ const scheduleDailyJob = (client, hour, minute, timezone) => {
 
 const doJob = async (client) => {
   try {
-    // Usando channelId diretamente do config.json
-    await sendBomdiaMessage(client, config.channelId);
+    // Usando channelId diretamente .env MONGAPROPS_CHANNEL_ID
+    await sendBomdiaMessage(client, process.env.MONGAPROPS_CHANNEL_ID);
     console.log('Mensagem de bom dia enviada com sucesso!');
   } catch (error) {
     console.error('Erro ao enviar mensagem de bom dia:', error);
