@@ -15,9 +15,12 @@ const sendBomdiaMessage = async (client, channelId) => {
         await fs.promises.access(imagePath);
         const attachment = new AttachmentBuilder(imagePath);
         
-        // Obtém o ID da role a partir da variável de ambiente
-        const roleMention = `<@&${process.env.MONGAPROPS_MONGA_ROLE_ID}>`;
-        await channel.send({ content: `Bom dia ${roleMention}\n`, files: [attachment] });
+        // Verifica se existe a variável de ambiente para a role
+        const messageContent = process.env.MONGAPROPS_MONGA_ROLE_ID 
+            ? `Bom dia <@&${process.env.MONGAPROPS_MONGA_ROLE_ID}>\n`
+            : `Bom dia\n`;
+
+        await channel.send({ content: messageContent, files: [attachment] });
         console.log(`Imagem enviada com sucesso: ${imagePath}`);
     } catch (error) {
         console.error(`Erro ao acessar a imagem: ${imagePath}`);
