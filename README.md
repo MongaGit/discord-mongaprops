@@ -1,6 +1,7 @@
-[![Docker](https://img.shields.io/badge/Docker-Hub-2496ED?logo=docker&logoColor=white&style=flat-square)](https://hub.docker.com/r/lorthe/discord-mongaprops)
-
 # discord-mongaprops
+
+![Docker Build and Publish](https://github.com/MongaGit/discord-mongaprops/actions/workflows/docker-publish.yml/badge.svg)
+[![Docker](https://img.shields.io/badge/Docker-Hub-2496ED?logo=docker&logoColor=white&style=flat-square)](https://hub.docker.com/r/lorthe/discord-mongaprops)
 
 Este bot faz parte de um projeto com múltiplos bots exclusivos para um canal no Discord. 
 
